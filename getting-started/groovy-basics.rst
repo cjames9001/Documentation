@@ -473,13 +473,13 @@ First, the basics. Method signatures can accept both typed and untyped arguments
 
     // arguments types are optional:
     def asMap(arg1, arg2) {
-        return [arg1: arg2]
+        return [(arg1): arg2]
     }
     assert [key: "val"] == asMap("key", "val")
 
     // can use typed arguments as well
     Map asMapWithTypedArgs(String arg1, String arg2) {
-        return [arg1: arg2]
+        return [(arg1): arg2]
     }
     assert [key: "another val"] = asMap("key", "another val")
 
@@ -489,7 +489,7 @@ The ``return`` statement is optional in a Groovy method. The value of the last e
 
     def asMap(arg1, arg2) {
         // no return statement
-        [arg1: arg2]
+        [(arg1): arg2]
     }
     assert [key: "val"] == asMap("key", "val")
 
